@@ -18,3 +18,12 @@ def cadastrarTransacao(descricao, valor, categoria):
 
         return nova_transacao
 
+def saldoTotal():
+        saldo = 0
+        for x in LISTA_TRANSACOES:
+                if x.categoria == "despesas":
+                        saldo -= x.valor
+                else:
+                        saldo += x.valor
+
+        print(saldo)
